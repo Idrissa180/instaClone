@@ -1,0 +1,131 @@
+.profile_container {
+  width: 80%;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+.info_line {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.profile_container .info_line_left {
+  width: 30%;
+  height: 20vh;
+}
+.profile_container .info_line_left img {
+  height: 100%;
+  border-radius: 50%;
+}
+.profile_container .info_line_right {
+  width: 70%;
+  height: 20vh;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_line_right_l1 {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  font-size: large;
+  margin-bottom: 0;
+}
+.info_line_right_l2 {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  font-size: medium;
+  margin-bottom: 0;
+}
+.info_line_right_l1 .icon,
+.info_line_right_l1 button,
+.info_line_right_l1 h3 {
+  margin-right: 10px;
+}
+.info_line_right_l1 h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.info_line_right_l1 button {
+  border-radius: 10px;
+  font-size: medium;
+  padding: 5px 15px;
+  border: none;
+  background-color: aliceblue;
+}
+.info_line_right_l2 p {
+  margin-right: 20px;
+  font-weight: bold;
+}
+.info_line_right .desc, .info_line_right .title, .info_line_right h4{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: small;
+}
+
+.profil_navigation{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-top: solid 1px rgb(110, 110, 110);
+    height: max-content;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.profil_navigation_item{
+   margin-right: 30px;
+   color: rgb(208, 208, 208);
+   padding-top: 10px;
+   cursor: pointer;
+}
+.profil_navigation .active{
+    color: white;
+    border-top: solid 1px white;
+}
+
+.profile_post{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.profile_post_item{
+    height: 35vh;
+    background-color: aliceblue;
+    width: calc((100% / 3) - 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile_post_item img{
+    height: 100%;
+    width: 100%;
+}
+.hover{
+    display: none;
+    position: absolute;
+    height: 35vh;
+    width: calc((21%) + 5px);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.208);
+    transition: 1s;
+}
+.hover p{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    margin-right: 10px;
+}
+.profile_post_item:hover .hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}

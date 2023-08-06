@@ -1,0 +1,242 @@
+.home_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.item_left {
+  width: 55%;
+}
+.item_left .statut_users {
+  height: 10vh;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.item_left .statut_pots {
+  width: 80%;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+}
+.item_right {
+  height: 50vh;
+  width: 35%;
+  color: white;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 70px !important;
+  height: max-content !important;
+  display: flex !important;
+  flex-direction: column;
+  text-align: center;
+  color: aliceblue;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: solid 2px red;
+}
+.swiper-slide p {
+  margin-top: 0;
+  font-size: smaller;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  height: 20px !important;
+}
+.item_right .profil{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.item_right .profil div{
+  width: 60%;
+}
+.item_right .profil p, .item_right .profil a{
+  font-size: smaller;
+  text-decoration: none;
+}
+.item_right .profil h5, .item_right .profil p{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.item_right .profil img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.item_right .title{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item_right .title p, .item_right .title a{
+  font-size: small;
+  color: antiquewhite;
+  text-decoration: none;
+}
+.item_right .title a{
+  color: rgba(240, 248, 255, 0.659);
+}
+.item_right .suggestion{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.item_right .suggestion div{
+  width: 60%;
+}
+.item_right .suggestion p, .item_right .suggestion a{
+  font-size: smaller;
+  text-decoration: none;
+}
+.item_right .suggestion h5, .item_right .suggestion p{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.item_right .suggestion img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.item_right .link{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 12px;
+}
+.item_right .link a{
+  color: aliceblue;
+  text-decoration: none;
+}
+.item_right .link a:hover{
+  text-decoration: underline;
+}
+.copyRight{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 12px;
+}
+/******************Post****************/
+.card_post{
+  height: max-content;
+  width: 100%;
+  color: white;
+  border-bottom: solid 1px rgb(193, 192, 192);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.card_post .card_user_info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
+.card_post .card_user_info button{
+  padding: 0;
+  margin: 0;
+  background-color: none;
+  background: none;
+  border: none;
+  margin-right: 10px;
+  color: white;
+  font-size: large;
+}
+.card_post .card_user_info div{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_post .card_user_info div img{
+  height: 42px;
+  width: 42px;
+  border: solid 2px red;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.card_post .card_user_info div strong:hover, .card_post .card_user_info button:hover, .post_info .icon:hover, .post_item_comment .icon:hover, .post_input_container .icon:hover{
+  color: rgb(149, 150, 151);
+  cursor: pointer;
+}
+.card_post_slider{
+  margin-top: 10px;
+  width: 100%;
+  height: 50vh;
+  background-color: antiquewhite;
+}
+.post_info{
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post_info div .icon{
+  margin-right: 10px;
+}
+.post_info .icon{
+  font-size: large;
+}
+.card_post p{
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-size: smaller;
+}
+.card_post p span{
+  color: rgb(183, 185, 187);
+}
+.post_item_comment{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_item_comment .icon{
+  font-size: 10px;
+}
+.post_input_container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.post_input_container input{
+  background-color: none;
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: small;
+}
+.post_input_container .icon{
+  position: absolute;
+  font-size: 15px;
+}
