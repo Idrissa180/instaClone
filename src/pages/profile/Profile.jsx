@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./profile.css";
 import user from "../../assets/images/user.png";
 import { FaRegSun } from "react-icons/fa";
 import Post from "../../components/profil/Post";
+import UserContext from "../../context/UserContext";
+import axios from "axios";
 
 const Profile = () => {
+  const [userInfo, setUserInfo] = useState("")
+  const {  isUser } = useContext(UserContext);
 
   const [active, setActive] = useState("publication")
+
+  useEffect(() => {
+    const handleGet = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/api/users/${isUser.id}`
+        );
+        setUserInfo(response.data)
+      } catch (err) {
+        // alert("Wrong credentials!!!");
+        console.log(err)
+      }
+    };
+
+    handleGet()
+  }, [])
+  
 
   return (
     <div className="profile_container">
@@ -16,6 +37,7 @@ const Profile = () => {
         </div>
         <div className="info_line_right">
           <div className="info_line_right_l1">
+            
             <h3>idrisstoure18</h3>
             <button>Modifier profil</button>
             <FaRegSun className="icon" />
@@ -25,7 +47,8 @@ const Profile = () => {
             <p>505 followers</p>
             <p>370 suivi(e)s</p>
           </div>
-          <h4>Idrissa Alassane Toure</h4>
+          <h4>{`${userInfo.nom} ${userInfo.prenom}`}</h4>
+          <h4>{isUser.email}</h4>
           <div>
             <p className="title">
               <strong>Ing. CyberSecurity</strong>

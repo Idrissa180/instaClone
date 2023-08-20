@@ -18,7 +18,7 @@ const Login = () => {
       const response = await login(email, password);
       if (response) {
         setIsAuthenticated(response.status);
-        setIsUser(response.id);
+        setIsUser(response.info);
       }
     } catch (err) {
       alert("Votre Username ou le mot de passe est incorrect!!!");

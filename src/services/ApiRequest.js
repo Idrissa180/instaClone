@@ -22,7 +22,7 @@ export function hasAuthenticate() {
       return false;
     } else {
       const res = jwtDecode(token);
-      const result = res.user;
+      const result = res;
 
       return result;
     }
@@ -40,7 +40,11 @@ export function login(email, password) {
     .then((token) => {
       console.log(token._id);
       addItem("instaToken", token.accessToken);
-      const data = { status: true, id: token._id };
+      const info = {
+        id: token._id,
+        email: token.email,
+      }
+      const data = { status: true, info};
       return data;
     });
 }
