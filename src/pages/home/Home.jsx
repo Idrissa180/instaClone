@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import statut from "../../assets/images/user.png";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +12,22 @@ import Item from "../../components/post/Item";
 
 
 export const Home = () => {
+  const [posts, setPosts] = useState([])
+  useEffect(() => {
+    const handleGet = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/api/posts`
+        );
+        setPosts(response.data)
+      } catch (err) {
+        // alert("Wrong credentials!!!");
+        console.log(err)
+      }
+    };
+
+    handleGet()
+  }, [])
   return (
     <div className="home_container">
       <div className="item_left">
@@ -33,16 +49,11 @@ export const Home = () => {
           </Swiper>
         </div>
         <div className="statut_pots">
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
+          {
+            posts?.map(post=>(
+              <Item key={post._id} post={post}/>
+            ))
+          }
         </div>
       </div>
       <div className="item_right">

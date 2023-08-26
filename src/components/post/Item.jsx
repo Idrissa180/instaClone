@@ -9,12 +9,12 @@ import {
   FaSmile,
 } from "react-icons/fa";
 
-const Item = () => {
+const Item = ({post}) => {
   return (
     <div className="card_post">
       <div className="card_user_info">
         <div>
-          <img src={statut} alt="statut" />
+          <img src={post.img} alt="statut" />
           <strong>@username</strong>
           <span> . </span>
           <span>1j</span>
@@ -37,7 +37,7 @@ const Item = () => {
         <strong>18 436 J’aime</strong>
       </p>
       <p>
-        <strong>insta2genies</strong> Qu’en pensez vous ?⠀...{" "}
+        <strong>insta2genies</strong> {post.description}⠀...{" "}
       </p>
       <p>
         <span>plus</span>
