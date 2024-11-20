@@ -14,4 +14,9 @@
 }
 .App_main{
   width: 81%;
+  position: relative;
+}
+
+::-webkit-scrollbar{
+  width: 0;
 }

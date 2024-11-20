@@ -15,3 +15,6 @@ code {
 :root {
   --swiper-navigation-size: 20px !important;
 }
+*{
+  box-sizing: border-box;
+}

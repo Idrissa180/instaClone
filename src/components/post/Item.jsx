@@ -1,6 +1,8 @@
-import React from "react";
-import statut from "../../assets/images/user.png"
+import React, { useContext } from "react";
+import statut from "../../assets/images/user.png";
 import { GoKebabHorizontal } from "react-icons/go";
+import UserContext from "../../context/UserContext";
+import axios from "axios";
 import {
   FaHeart,
   FaMailchimp,
@@ -9,7 +11,23 @@ import {
   FaSmile,
 } from "react-icons/fa";
 
-const Item = ({post}) => {
+const Item = ({ post, onModalPost, setPosts }) => {
+  const { isUser } = useContext(UserContext);
+
+  const handleLike = async (postId) => {
+    try {
+      const response = await axios.post(`http://localhost:5000/api/likes/`, {
+        postId: postId,
+        userId: isUser.id,
+      });
+      const resp = await axios.get(`http://localhost:5000/api/posts`);
+      setPosts(resp.data);
+      // alert(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="card_post">
       <div className="card_user_info">
@@ -23,10 +41,12 @@ const Item = ({post}) => {
           <GoKebabHorizontal />
         </button>
       </div>
-      <div className="card_post_slider"></div>
+      <div className="card_post_slider">
+        <img src={post.img} alt="" onClick={() => onModalPost(post._id)} />
+      </div>
       <div className="post_info">
         <div>
-          <FaHeart className="icon" />
+          <FaHeart className="icon" onClick={() => handleLike(post._id)} />
           <FaMailchimp className="icon" />
           <FaShare className="icon" />
         </div>
@@ -34,7 +54,7 @@ const Item = ({post}) => {
       </div>
 
       <p>
-        <strong>18 436 J’aime</strong>
+        <strong>{post.likes} J’aime</strong>
       </p>
       <p>
         <strong>insta2genies</strong> {post.description}⠀...{" "}
@@ -43,15 +63,17 @@ const Item = ({post}) => {
         <span>plus</span>
       </p>
       <p>
-        <span>Afficher les 163 commentaires</span>
+        <span>{`Afficher les ${post.comments}  commentaires`}</span>
       </p>
-      <div className="post_item_comment">
-        <p>
-          <strong>insta2genies</strong> Du coup j'espère que vous avez compris
-        </p>
-        <FaHeart className="icon" />
-      </div>
+      {post.commentsList?.map((comment, indexer) => (
+        <div className="post_item_comment" id={indexer}>
+          <p>
+            <strong>insta2genies</strong> {comment.desc}
+          </p>
 
+          <FaHeart className="icon" />
+        </div>
+      ))}
       <div className="post_input_container">
         <input type="text" placeholder="Ajouter un commentaire..." />
         <FaSmile className="icon" />

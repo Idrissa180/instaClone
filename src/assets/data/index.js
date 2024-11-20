@@ -10,69 +10,68 @@ import u8 from "../images/user8.png";
 import u9 from "../images/user9.png";
 import u10 from "../images/user10.png";
 import u11 from "../images/user12.jpeg";
+const userId="12345678"
 
 export const story = [
   {
-    id: 1,
-    img: u,
-    username: "@username",
+    user:{
+      username: "benj01",
+      img: u1,
+    },
+    items:[
+      {
+        _id: "tsfdtysgwe8o7wtfg8",
+        img: u4,
+        description:"",
+        views:[{userId}]
+      },
+      {
+        _id: "tsfdtyscve8o7wtfg8",
+        img: u5,
+        description:"",
+        views:[{userId}]
+      },
+      {
+        _id: "tsfdtys56e8o7wtfg8",
+        img: u11,
+        description:"",
+        views:[{userId}]
+      },
+    ]
   },
   {
-    id: 2,
-    img: u1,
-    username: "@username1",
+    user:{
+      username: "maud01",
+      img: u2,
+    },
+    items:[
+      {
+        _id: "tsfdtysere8o7wtfg8",
+        img: u6,
+        description:"",
+        views:[{userId}]
+      },
+      {
+        _id: "tsfdjhjcve8o7wtfg8",
+        img: u8,
+        description:"",
+        views:[{userId}]
+      },
+      {
+        _id: "tsfdjhjcve857wtfg8",
+        img: u9,
+        description:"",
+        views:[{userId}]
+      },
+      {
+        _id: "tsfdjhjcv48o7wtfg8",
+        img: u10,
+        description:"",
+        views:[{userId}]
+      },
+    ]
   },
-  {
-    id: 3,
-    img: u2,
-    username: "@username2",
-  },
-  {
-    id: 4,
-    img: u3,
-    username: "@username3",
-  },
-  {
-    id: 5,
-    img: u4,
-    username: "@username4",
-  },
-  {
-    id: 6,
-    img: u5,
-    username: "@username5",
-  },
-  {
-    id: 7,
-    img: u6,
-    username: "@username6",
-  },
-  {
-    id: 8,
-    img: u7,
-    username: "@username7",
-  },
-  {
-    id: 9,
-    img: u8,
-    username: "@username8",
-  },
-  {
-    id: 10,
-    img: u9,
-    username: "@username9",
-  },
-  {
-    id: 11,
-    img: u10,
-    username: "@username10",
-  },
-  {
-    id: 12,
-    img: u11,
-    username: "@username11",
-  },
-];
+]
 
 export const userSuggestions = [
   {

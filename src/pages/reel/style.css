@@ -1,0 +1,27 @@
+.reel_page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.card_container {
+  width: 450px;
+  height: 95%;
+}
+.card_container .slick-slider {
+  height: 100% !important;
+}
+.card_container .slick-slider .slick-list {
+  height: 100% !important;
+}
+.cardReel {
+  background-color: #fff;
+  height: 80vh;
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,116 @@
+.storyContaint {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgb(9, 9, 9);
+  color: white;
+}
+.storyContaint .closeBtnContaint {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px;
+}
+.storyContaint .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.storyContaint .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storyContaint .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.storyContaint .autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.storyContaint .autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.stories_swiper{
+    height: 50vh; 
+    width: 500px;
+    margin: 10px auto;
+}
+
+.stories_swiper{
+    height: 80vh; 
+    width: 500px;
+    margin: 0 auto;
+}
+.stories_swiper .mySwiper{
+    height: 80vh; 
+    width: 500px;
+    margin: 0 auto;
+}
+
+.stories_swiper .swiper-slide, .stories_swiper .swiper-wrapper  {
+    height: 100% !important; 
+    width: 100% !important;
+}
+
+/* .stories_swiper .img_story_swiper {
+    height: 100%; 
+    width: 100%;
+} */
+
+.storie_user_info{
+    display: flex;
+    align-items: center;
+    height: 10vh; 
+    width: 500px;
+    margin: 0 auto;
+}
+.storie_user_info .storie_user_img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid red 1px;
+    margin-right: 10px;
+}
+.storie_user_info .storie_user_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
